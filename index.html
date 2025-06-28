@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agile Labs - Academic Services</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-900">
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-sm py-4 px-6 md:px-12 fixed w-full z-50 top-0">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-orange-700 hover:text-orange-800 transition duration-300">Agile Labs</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-orange-600 font-medium transition duration-300">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-orange-600 font-medium transition duration-300">About Us</a>
+                <a href="#services" class="text-gray-700 hover:text-orange-600 font-medium transition duration-300">Services</a>
+                <a href="#ai-tools" class="text-gray-700 hover:text-orange-600 font-medium transition duration-300">Generator</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-orange-600 font-medium transition duration-300">Testimonials</a>
+                <a href="#contact" class="text-gray-700 hover:text-orange-600 font-medium transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-6 text-xl">
+            <button id="close-mobile-menu" class="absolute top-6 right-6 focus:outline-none">
+                <svg class="w-8 h-8 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <a href="#home" class="text-gray-700 hover:text-orange-600 font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
+            <a href="#about" class="text-gray-700 hover:text-orange-600 font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About Us</a>
+            <a href="#services" class="text-gray-700 hover:text-orange-600 font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Services</a>
+            <a href="#ai-tools" class="text-gray-700 hover:text-orange-600 font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Generator</a>
+            <a href="#testimonials" class="text-gray-700 hover:text-orange-600 font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Testimonials</a>
+            <a href="#contact" class="text-gray-700 hover:text-orange-600 font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-20"> <!-- Padding top to account for fixed header -->
+
+        <!-- Hero Section -->
+        <section id="home" class="relative bg-gradient-to-r from-orange-600 to-orange-700 text-white py-24 md:py-32 flex items-center justify-center min-h-[calc(100vh-80px)]">
+            <div class="container mx-auto text-center px-6">
+                <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                    Empowering Your Academic Journey
+                </h2>
+                <p class="text-xl md:text-2xl mb-10 opacity-90 animate-fade-in-up">
+                    Expert Academic Services for Graduate and Undergraduate Students
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center max-w-xl mx-auto">
+                    <a href="#services" class="inline-block bg-white text-orange-700 hover:bg-orange-100 hover:text-orange-800 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 animate-bounce-in">
+                        Explore Our Services
+                    </a>
+                    <!-- Email Button -->
+                    <a href="mailto:agilelabs@gmail.com"
+                       class="inline-block bg-black hover:bg-gray-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        Email Us
+                    </a>
+
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/233593159535" target="_blank" rel="noopener noreferrer"
+                       class="inline-block bg-[#25D366] hover:bg-[#1DA851] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.825 15.358c-1.077-.614-2.31-.955-3.593-.955-1.283 0-2.516.341-3.593.955l-.707.41V10c0-1.657 1.343-3 3-3s3 1.343 3 3v5.358z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4.962 0-9-4.038-9-9s4.038-9 9-9 9 4.038 9 9-4.038 9-9 9zm0-18c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7z"/>
+                        </svg>
+                        WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us & Impact Section (Merged) -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-5xl text-center">
+                <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">About Agile Labs & Our Impact</h3>
+                <div class="text-lg text-gray-700 leading-relaxed space-y-6 mb-12">
+                    <p>
+                        At Agile Labs, we are passionate about supporting students in achieving their academic goals. We understand that the journey through higher education, especially in demanding STEM fields, can be challenging, with the final year thesis often being a significant hurdle.
+                    </p>
+                    <p>
+                        Our mission is to bridge the gap between academic aspiration and achievement by providing expert, personalized, and timely assistance. Our team is composed of highly qualified academics and industry professionals with deep expertise in various scientific and technical disciplines.
+                    </p>
+                    <p>
+                        We are committed to upholding the highest standards of academic integrity and quality. Whether you need guidance on complex research, meticulous formatting, or ensuring originality, Agile Labs is your trusted partner for academic excellence.
+                    </p>
+                </div>
+
+                <!-- Animated Counts (Moved from old 'impact' section) -->
+                <h4 class="text-2xl font-bold mb-8 text-gray-800">Our Achievements</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                    <div class="p-6 rounded-xl bg-orange-600 text-white shadow-lg">
+                        <div class="text-6xl font-extrabold mb-2" id="clientCount">0</div>
+                        <p class="text-xl font-semibold">Happy Clients</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-orange-600 text-white shadow-lg">
+                        <div class="text-6xl font-extrabold mb-2" id="thesesCompletedCount">0</div>
+                        <p class="text-xl font-semibold">Theses Completed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section (Existing) -->
+        <section id="services" class="py-16 md:py-24 bg-neutral-50">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Core Academic Services</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Original Service Card 1: Thesis Writing -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-orange-600 mb-4 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-semibold text-center mb-4 text-gray-800">Thesis Writing</h4>
+                        <p class="text-gray-700 text-center">
+                            Comprehensive thesis writing support for STEM fields, guiding students from topic
+                            selection to final submission.
+                        </p>
+                    </div>
+
+                    <!-- Original Service Card 2: Referencing & Formatting -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-orange-600 mb-4 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-semibold text-center mb-4 text-gray-800">Referencing & Formatting</h4>
+                        <p class="text-gray-700 text-center">
+                            Expert assistance with various citation styles (APA, MLA, Chicago, etc.) and
+                            formatting your thesis/dissertation.
+                        </p>
+                    </div>
+
+                    <!-- Original Service Card 3: Plagiarism Checks -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-orange-600 mb-4 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.92 12c0 3.072 1.87 5.75 4.5 7.227l2.152 1.08a3 3 0 002.856 0l2.152-1.08c2.63-1.477 4.5-4.155 4.5-7.227a12.001 12.001 0 00-3.082-8.016z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-semibold text-center mb-4 text-gray-800">Plagiarism Checks</h4>
+                        <p class="text-gray-700 text-center">
+                            Thorough plagiarism checks using advanced tools and detailed reports to ensure
+                            the originality and academic integrity of your work.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Tools Section (Existing) -->
+        <section id="ai-tools" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Smart Academic AI Tools ✨</h3>
+                <p class="text-lg text-gray-700 text-center mb-10 max-w-2xl mx-auto">
+                    Leverage the power of Artificial Intelligence to streamline your academic tasks. Our
+                    Gemini-powered tools are designed to assist you in brainstorming and summarizing your work.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
+                    <!-- Thesis Topic Brainstormer (Gemini API) -->
+                    <div class="bg-neutral-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer" onclick="openModal('thesisTopicModal')">
+                        <div class="text-orange-500 mb-4 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 20.33V21m0-2.333H9.5M12 20.33h2.5M12 3v1m0 16v1m9.227-8.227-1.414-1.414M4.227 19.227l-1.414-1.414m15.556 0 .88-.88m-1.414 1.414L19.227 4.227m0 15.556-1.414-1.414M4.227 4.227l-1.414 1.414m15.556 0 .88-.88m-1.414 1.414L19.227 4.227M12 6.757l4.95 4.95L12 16.657 7.05 11.707 12 6.757z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-semibold text-center mb-4 text-gray-800">Thesis Topic Brainstormer</h4>
+                        <p class="text-gray-700 text-center">
+                            Generate innovative and relevant thesis topic ideas for any field of study, based on your interests.
+                        </p>
+                    </div>
+
+                    <!-- Abstract Generator (Gemini API) -->
+                    <div class="bg-neutral-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer" onclick="openModal('abstractGeneratorModal')">
+                        <div class="text-orange-500 mb-4 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h10M7 16h6M8 20H6a2 2 0 01-2-2V6a2 2 0 012-2h2m0 16h2c.552 0 1-.448 1-1V5a1 1 0 00-1-1H8c-.552 0-1 .448-1 1v12c0 1.1.9 2 2 2z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-semibold text-center mb-4 text-gray-800">Abstract Generator</h4>
+                        <p class="text-gray-700 text-center">
+                            Get a concise and impactful abstract generated from your thesis content or key research points.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-16 md:py-24 bg-neutral-50">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">What Our Students Say</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Testimonial 1: Jacob -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                        <p class="text-gray-700 italic mb-4">"Agile Labs helped me navigate the complexities of my engineering thesis. Their support in structuring my arguments and refining my research was invaluable!"</p>
+                        <p class="font-semibold text-orange-600">- Jacob, Engineering Graduate</p>
+                    </div>
+                    <!-- Testimonial 2: Suzzy -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                        <p class="text-gray-700 italic mb-4">"The plagiarism check service was incredibly thorough. It gave me peace of mind knowing my work was original and perfectly cited."</p>
+                        <p class="font-semibold text-orange-600">- Suzzy, Biology Student</p>
+                    </div>
+                    <!-- Testimonial 3: Gerald -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                        <p class="text-gray-700 italic mb-4">"I struggled with formatting my physics thesis according to university guidelines. Agile Labs transformed my document, making it flawless."</p>
+                        <p class="font-semibold text-orange-600">- Gerald, Physics Graduate</p>
+                    </div>
+                    <!-- Testimonial 4: Nana -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                        <p class="text-gray-700 italic mb-4">"The thesis topic brainstormer gave me so many great ideas. It really kickstarted my research project and saved me a lot of time."</p>
+                        <p class="font-semibold text-orange-600">- Nana, Computer Science Student</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (Existing) -->
+        <section id="contact" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                <h3 class="text-3xl md:text-4xl font-bold mb-8 text-gray-800">Get in Touch</h3>
+                <p class="text-lg md:text-xl text-gray-700 mb-10 leading-relaxed">
+                    Have questions about our services or need assistance with your academic work?
+                    Reach out to us through email or WhatsApp. We're here to help!
+                </p>
+
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center w-full">
+                    <!-- Email Button -->
+                    <a href="mailto:agilelabs@gmail.com"
+                       class="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        Send an Email
+                    </a>
+
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/233593159535" target="_blank" rel="noopener noreferrer"
+                       class="bg-black hover:bg-gray-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.825 15.358c-1.077-.614-2.31-.955-3.593-.955-1.283 0-2.516.341-3.593.955l-.707.41V10c0-1.657 1.343-3 3-3s3 1.343 3 3v5.358z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4.962 0-9-4.038-9-9s4.038-9 9-9 9 4.038 9 9-4.038 9-9 9zm0-18c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7z"/>
+                        </svg>
+                        WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 text-center mt-12">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2025 Agile Labs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Thesis Topic Brainstormer Modal -->
+    <div id="thesisTopicModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('thesisTopicModal')">&times;</span>
+            <h3 class="text-3xl font-bold mb-6 text-gray-800 text-center">Thesis Topic Brainstormer ✨</h3>
+            <div class="mb-4">
+                <label for="fieldOfStudy" class="block text-gray-700 text-sm font-bold mb-2">Field of Study:</label>
+                <input type="text" id="fieldOfStudy" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-orange-500" placeholder="e.g., Computer Science, Biology, Engineering">
+            </div>
+            <div class="mb-6">
+                <label for="keyInterests" class="block text-gray-700 text-sm font-bold mb-2">Key Interests (comma-separated):</label>
+                <input type="text" id="keyInterests" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-orange-500" placeholder="e.g., AI, Machine Learning, Robotics">
+            </div>
+            <button id="generateTopicsBtn" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out w-full flex items-center justify-center">
+                Generate Topics ✨
+                <div id="topicsLoader" class="loader ml-3 hidden"></div>
+            </button>
+            <div id="thesisTopicsResult" class="mt-8 p-4 bg-gray-50 border border-gray-200 rounded-lg hidden">
+                <h4 class="text-xl font-semibold mb-3 text-gray-800">Suggested Topics:</h4>
+                <div class="text-gray-700 whitespace-pre-wrap" id="topicsOutput"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Abstract Generator Modal -->
+    <div id="abstractGeneratorModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('abstractGeneratorModal')">&times;</span>
+            <h3 class="text-3xl font-bold mb-6 text-gray-800 text-center">Abstract Generator ✨</h3>
+            <div class="mb-6">
+                <label for="thesisContent" class="block text-gray-700 text-sm font-bold mb-2">Thesis Content / Key Points:</label>
+                <textarea id="thesisContent" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-orange-500 h-40 resize-y" placeholder="Paste your thesis introduction, conclusion, or key findings here..."></textarea>
+            </div>
+            <button id="generateAbstractBtn" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out w-full flex items-center justify-center">
+                Generate Abstract ✨
+                <div id="abstractLoader" class="loader ml-3 hidden"></div>
+            </button>
+            <div id="abstractResult" class="mt-8 p-4 bg-gray-50 border border-gray-200 rounded-lg hidden">
+                <h4 class="text-xl font-semibold mb-3 text-gray-800">Generated Abstract:</h4>
+                <div class="text-gray-700 whitespace-pre-wrap" id="abstractOutput"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script tag containing all JavaScript -->
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.remove('hidden');
+        });
+
+        document.getElementById('close-mobile-menu').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+
+        // --- Modal Functionality ---
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+            // Clear results and inputs when closing
+            if (modalId === 'thesisTopicModal') {
+                document.getElementById('fieldOfStudy').value = '';
+                document.getElementById('keyInterests').value = '';
+                document.getElementById('thesisTopicsResult').classList.add('hidden');
+                document.getElementById('topicsOutput').innerText = '';
+            } else if (modalId === 'abstractGeneratorModal') {
+                document.getElementById('thesisContent').value = '';
+                document.getElementById('abstractResult').classList.add('hidden');
+                document.getElementById('abstractOutput').innerText = '';
+            }
+        }
+
+        // Close modal when clicking outside the content
+        window.onclick = function(event) {
+            const thesisTopicModal = document.getElementById('thesisTopicModal');
+            const abstractGeneratorModal = document.getElementById('abstractGeneratorModal');
+
+            if (event.target === thesisTopicModal) {
+                closeModal('thesisTopicModal');
+            } else if (event.target === abstractGeneratorModal) {
+                closeModal('abstractGeneratorModal');
+            }
+        }
+
+        // --- Animated Count Functionality ---
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Intersection Observer to trigger animations when 'About Us' section is in view
+        const aboutSection = document.getElementById('about');
+        let animationTriggered = false; // Flag to ensure animation plays only once
+
+        const observerOptions = {
+            root: null, // Use the viewport as the root
+            rootMargin: '0px',
+            threshold: 0.5 // Trigger when 50% of the section is visible
+        };
+
+        const aboutObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !animationTriggered) {
+                    // Start the animations
+                    const clientCountElement = document.getElementById('clientCount');
+                    const thesesCompletedCountElement = document.getElementById('thesesCompletedCount');
+
+                    animateValue(clientCountElement, 0, 20, 2000); // Animate to 20 clients over 2 seconds
+                    animateValue(thesesCompletedCountElement, 0, 26, 2000); // Animate to 26 theses over 2 seconds
+
+                    animationTriggered = true; // Set flag to true
+                    observer.disconnect(); // Stop observing after animation is triggered
+                }
+            });
+        }, observerOptions);
+
+        aboutObserver.observe(aboutSection);
+
+        // --- Gemini API Call Functions ---
+
+        // Thesis Topic Brainstormer
+        document.getElementById('generateTopicsBtn').addEventListener('click', async () => {
+            const fieldOfStudy = document.getElementById('fieldOfStudy').value.trim();
+            const keyInterests = document.getElementById('keyInterests').value.trim();
+            const topicsOutput = document.getElementById('topicsOutput');
+            const topicsLoader = document.getElementById('topicsLoader');
+            const thesisTopicsResult = document.getElementById('thesisTopicsResult');
+            const generateButton = document.getElementById('generateTopicsBtn');
+
+            if (!fieldOfStudy && !keyInterests) {
+                topicsOutput.innerText = 'Please enter your field of study or key interests.';
+                thesisTopicsResult.classList.remove('hidden');
+                return;
+            }
+
+            topicsOutput.innerText = ''; // Clear previous results
+            thesisTopicsResult.classList.add('hidden');
+            topicsLoader.classList.remove('hidden'); // Show loader
+            generateButton.disabled = true; // Disable button during loading
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            const payload = { contents: chatHistory };
+            const apiKey = ""; // Canvas will automatically provide this at runtime
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    topicsOutput.innerText = text;
+                    thesisTopicsResult.classList.remove('hidden');
+                } else {
+                    topicsOutput.innerText = 'Could not generate topics. Please try again.';
+                    thesisTopicsResult.classList.remove('hidden');
+                    console.error('Gemini API response structure unexpected:', result);
+                }
+            } catch (error) {
+                topicsOutput.innerText = 'An error occurred while generating topics. Please try again later.';
+                thesisTopicsResult.classList.remove('hidden');
+                console.error('Error calling Gemini API for topics:', error);
+            } finally {
+                topicsLoader.classList.add('hidden'); // Hide loader
+                generateButton.disabled = false; // Re-enable button
+            }
+        });
+
+        // Abstract Generator
+        document.getElementById('generateAbstractBtn').addEventListener('click', async () => {
+            const thesisContent = document.getElementById('thesisContent').value.trim();
+            const abstractOutput = document.getElementById('abstractOutput');
+            const abstractLoader = document.getElementById('abstractLoader');
+            const abstractResult = document.getElementById('abstractResult');
+            const generateButton = document.getElementById('generateAbstractBtn');
+
+
+            if (!thesisContent) {
+                abstractOutput.innerText = 'Please paste your thesis content or key points to generate an abstract.';
+                abstractResult.classList.remove('hidden');
+                return;
+            }
+
+            abstractOutput.innerText = ''; // Clear previous results
+            abstractResult.classList.add('hidden');
+            abstractLoader.classList.remove('hidden'); // Show loader
+            generateButton.disabled = true; // Disable button during loading
+
+            const prompt = `Generate a concise, professional abstract (around 150-250 words) based on the following thesis content or key points. Focus on the purpose, methods, key findings, and conclusions. Do not include a title or section headers in the abstract itself:\n\n"${thesisContent}"`;
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            const payload = { contents: chatHistory };
+            const apiKey = ""; // Canvas will automatically provide this at runtime
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    abstractOutput.innerText = text;
+                    abstractResult.classList.remove('hidden');
+                } else {
+                    topicsOutput.innerText = 'Could not generate abstract. Please try again.';
+                    thesisTopicsResult.classList.remove('hidden');
+                    console.error('Gemini API response structure unexpected:', result);
+                }
+            } catch (error) {
+                topicsOutput.innerText = 'An error occurred while generating the abstract. Please try again later.';
+                thesisTopicsResult.classList.remove('hidden');
+                    console.error('Error calling Gemini API for abstract:', error);
+                } finally {
+                    abstractLoader.classList.add('hidden'); // Hide loader
+                    generateButton.disabled = false; // Re-enable button
+                }
+            });
+        </script>
+    </body>
+</html>
